@@ -59,30 +59,30 @@ $grados = $buscargrado->mostrarGrados();
         </div>
         <div class="row mb-3">
             <div class="col">
-                <button type="submit" id="BtnGuardar" class="btn btn-primary w-100">Guardar</button>
+                <button type="submit" id="BtnGuardar" class="btn btn-primary w-100 text-uppercase fw-bold shadow border-0">Guardar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnBuscar" class="btn btn-info w-100">Buscar</button>
+                <button type="button" id="BtnBuscar" class="btn btn-info w-100 text-uppercase fw-bold shadow border-0">Buscar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnModificar" class="btn btn-warning w-100">Modificar</button>
+                <button type="button" id="BtnModificar" class="btn btn-warning w-100 text-uppercase fw-bold shadow border-0">Modificar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnCancelar" class="btn btn-secondary w-100">Cancelar</button>
+                <button type="button" id="BtnCancelar" class="btn btn-secondary w-100 text-uppercase fw-bold shadow border-0">Cancelar</button>
             </div>
             <div class="col">
-                <button type="reset" id="BtnLimpiar" class="btn btn-secondary w-100">Limpiar</button>
+                <button type="reset" id="BtnLimpiar" class="btn btn-secondary w-100 text-uppercase fw-bold shadow border-0">Limpiar</button>
             </div>
         </div>
     </form>
 </div>
 <!-- MOSTRAR DATOS -->
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-4">
     <div class="col-lg-10 table-wrapper">
         <h2 class="text-center mb-4">Alumnos Ingresados</h2>
         <div class="table-responsive">
             <table class="table table-bordered table-hover" id="AlumnosIngresados">
-                <thead>
+                <thead class="table-warning" >
                     <tr>
                         <th>No.</th>
                         <th>Nombres</th>
