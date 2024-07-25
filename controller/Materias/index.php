@@ -19,7 +19,7 @@ try {
             } elseif ($tipo === "2") {
                 $Materia = new Materia($_POST);
                 $ejecucion = $Materia->modificar();
-                $mensaje = "Materia odificada correctamente";
+                $mensaje = "Materia modificada correctamente";
                 $codigo = 2;
             } elseif ($tipo === "3") {
                 $Materia = new Materia($_POST);

@@ -8,20 +8,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav justify-content-center text-center mx-auto">
-                <li class="nav-item px-4">
+                <li class="nav-item px-2">
                     <a class="nav-link active" aria-current="page" href="/CRUD_JS2_VASQUEZ/view/index/index.php"><i class="bi bi-house-fill me-2"></i>Inicio</a>
                 </li>
-                <li class="nav-item px-4">
+                <li class="nav-item px-2">
                     <a class="nav-link active" aria-current="page" href="/CRUD_JS2_VASQUEZ/view/alumnos/index.php"><i class="bi bi-person-square me-2"></i>Alumnos</a>
                 </li>
-                <li class="nav-item px-4">
+                <li class="nav-item px-2">
                     <a class="nav-link active" aria-current="page" href="/CRUD_JS2_VASQUEZ/view/materias/index.php"><i class="bi bi-clipboard2-pulse-fill me-2"></i>Materias</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-clipboard-check-fill me-2"></i>Califcaciones</a>
                     <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
-                        <li><a class="dropdown-item" href="/CRUD_JS2_VASQUEZ/view/notas/index.php"><i class="bi bi-file-earmark-arrow-up me-2"></i>Ingresar Calificaciones</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-pencil me-2"></i>Modificar Calificaciones</a></li>
+                        <li><a class="dropdown-item" href="/CRUD_JS2_VASQUEZ/view/notas/index.php"><i class="bi bi-pencil me-2"></i>Ingresar Calificaciones</a></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill me-2"></i>Ver Tarjeta de Calificaciones</a></li>
                     </ul>
                 </li>

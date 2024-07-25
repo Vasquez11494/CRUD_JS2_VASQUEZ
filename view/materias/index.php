@@ -16,7 +16,7 @@ include_once '../template/header.php'; ?>
         <div class="row mb-3">
             <div class="col">
                 <label for="materia_nombre">Nombre de la materia</label>
-                <input type="text" name="materia_nombre" id="materia_nombre" class="form-control" required>
+                <input type="text" name="materia_nombre" id="materia_nombre" class="form-control" >
             </div>
         </div>
         <div class="row mb-3">
@@ -42,7 +42,7 @@ include_once '../template/header.php'; ?>
     <div class="col-lg-7 table-wrapper">
         <h2 class="text-center mb-4">Materias Registradas</h2>
         <div class="table-responsive">
-            <table class="table table-bordered table-hover" id="AlumnosIngresados">
+            <table class="table table-bordered table-hover" id="MateriasIngresadas">
                 <thead class="table-warning">
                     <tr>
                         <th>No.</th>
@@ -64,4 +64,4 @@ include_once '../template/header.php'; ?>
 <script src="../../src/materias/materias.js"></script>
 <script src="../../src/funciones.js"></script>
 
-<?php include '../templates/footer.php'; ?>
+<?php include '../template/footer.php'; ?>

@@ -12,11 +12,11 @@ create table armas (
 
 create table alumnos (
     alu_id SERIAL NOT NULL,
-    alu_nombre VARCHAR(50),
-    alu_apellido VARCHAR(50),
-    alu_grado INT,
-    alu_arma INT,
-    alu_nacionalidad VARCHAR(75),
+    alu_nombre VARCHAR(50) NOT NULL,
+    alu_apellido VARCHAR(50) NOT NULL,
+    alu_grado INT NOT NULL,
+    alu_arma INT NOT NULL,
+    alu_nacionalidad VARCHAR(75) NOT NULL,
     alu_situacion INT DEFAULT 1,
     PRIMARY KEY (alu_id),
     FOREIGN KEY (alu_grado) REFERENCES grados (grad_id),
@@ -32,6 +32,7 @@ insert into grados (grad_nombre) values ("Sgto. 1ro");
 insert into grados (grad_nombre) values ("Especialista");
 insert into grados (grad_nombre) values ("Planillero");
 insert into grados (grad_nombre) values ("Subteniente");
+insert into grados (grad_nombre) values ("Teniente");
 insert into grados (grad_nombre) values ("Capitan 2do.");
 insert into grados (grad_nombre) values ("Capitan 1ro.");
 insert into grados (grad_nombre) values ("Mayor");
