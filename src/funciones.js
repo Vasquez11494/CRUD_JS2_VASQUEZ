@@ -18,7 +18,7 @@ const validarFormulario = (formulario, excepciones = []) => {
 
 const removerValidaciones = formulario => {
     const elements = formulario.querySelectorAll("input, select, textarea");
-    elements.forEach(element => {
+    elements.forEach(element => {   
 
         element.classList.remove('is-invalid');
 

@@ -13,17 +13,17 @@ try {
         case 'POST':
             if ($tipo === '1') {
                 $Alumno = new Alumno($_POST);
-                $ejecutar = $Alumno->guardar();
+                $ejecucion = $Alumno->guardar();
                 $mensaje = "Alumno Guardado correctamente";
                 $codigo = 1;
             } elseif ($tipo === "2") {
                 $Alumno = new Alumno($_POST);
-                $ejecutar = $Alumno->modificar();
+                $ejecucion = $Alumno->modificar();
                 $mensaje = "Alumno Modificado correctamente";
                 $codigo = 2;
             } elseif ($tipo === "3") {
                 $Alumno = new Alumno($_POST);
-                $ejecutar = $Alumno->eliminar();
+                $ejecucion = $Alumno->eliminar();
                 $mensaje = "Alumno Eliminado correctamente";
                 $codigo = 3;
             } else {
@@ -37,7 +37,7 @@ try {
             $AlumnoNuevo = $Alumno->buscar();
             echo json_encode($AlumnoNuevo);
             exit;
-            
+
         default:
             http_response_code(405);
             $mensaje = "Método no permitido";

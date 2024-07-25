@@ -35,7 +35,7 @@ class Alumno extends Conexion
     public function buscar(...$columnas)
     {
         $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
-        $sql = "SELECT alu_id, alu_nombre, alu_apellido,  grad_nombre, arm_nombre, alu_nacionalidad FROM alumnos INNER JOIN grados ON alu_grado = grad_id INNER JOIN armas ON alu_arma = arm_id WHERE alu_situacion = 1 ";
+        $sql = "SELECT alu_id, alu_nombre, alu_apellido, alu_grado, alu_arma, grad_nombre, arm_nombre, alu_nacionalidad FROM alumnos INNER JOIN grados ON alu_grado = grad_id INNER JOIN armas ON alu_arma = arm_id WHERE alu_situacion = 1 ";
 
         if ($this->alu_nombre != '') {
             $sql .= " AND alu_nombre like '%$this->alu_nombre%' ";
@@ -54,7 +54,7 @@ class Alumno extends Conexion
         }
         
 
-        // echo $sql;
+        // echo json_encode($sql);
         // exit;
         $resultado = self::servir($sql);
         return $resultado;
@@ -86,7 +86,7 @@ class Alumno extends Conexion
 
     public function eliminar(){
         $sql = " UPDATE alumnos SET alu_situacion = 0 WHERE alu_id = $this->alu_id ";
-        
+
         $resultado = $this->ejecutar($sql);
         return $resultado;
     }

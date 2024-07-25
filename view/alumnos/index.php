@@ -18,24 +18,24 @@ $grados = $buscargrado->mostrarGrados();
     <form class="border bg-light shadow rounded p-4 col-lg-6">
         <div class="row mb-3">
             <div class="col">
-                <input type="hidden" name="alu_id" id="alu_id" class="form-control" required>
+                <input type="hidden" name="alu_id" id="alu_id" class="form-control" >
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                 <label for="alu_nombre">Nombre del Alumno</label>
-                <input type="text" name="alu_nombre" id="alu_nombre" class="form-control" required>
+                <input type="text" name="alu_nombre" id="alu_nombre" class="form-control" >
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                 <label for="alu_apellido">Apellidos del Alumno</label>
-                <input type="text" name="alu_apellido" id="alu_apellido" class="form-control" required>
+                <input type="text" name="alu_apellido" id="alu_apellido" class="form-control" >
             </div>
         </div>
         <div class="col">
             <label for="alu_grado">Grado del Alumno</label>
-            <select name="alu_grado" id="alu_grado" class="form-control" required>
+            <select name="alu_grado" id="alu_grado" class="form-control" >
                 <option value="">SELECCIONE...</option>
                 <?php foreach ($grados as $grado) : ?>
                     <option value="<?= $grado['grad_id'] ?>"> <?= $grado['grad_nombre'] . ""  ?></option>
@@ -44,7 +44,7 @@ $grados = $buscargrado->mostrarGrados();
         </div>
         <div class="col mb-3">
             <label for="alu_arma">Arma del Alumno</label>
-            <select name="alu_arma" id="alu_arma" class="form-control" required>
+            <select name="alu_arma" id="alu_arma" class="form-control" >
                 <option value="">SELECCIONE...</option>
                 <?php foreach ($armas as $arma) : ?>
                     <option value="<?= $arma['arm_id'] ?>"> <?= $arma['arm_nombre'] . ""  ?></option>
@@ -54,7 +54,7 @@ $grados = $buscargrado->mostrarGrados();
         <div class="row mb-3">
             <div class="col">
                 <label for="alu_nacionalidad">Nacionalidad del Alumno</label>
-                <input type="text" name="alu_nacionalidad" id="alu_nacionalidad" class="form-control" placeholder="Ej. Guatemalteco" required>
+                <input type="text" name="alu_nacionalidad" id="alu_nacionalidad" class="form-control" placeholder="Ej. Guatemalteco" >
             </div>
         </div>
         <div class="row mb-3">
@@ -77,7 +77,7 @@ $grados = $buscargrado->mostrarGrados();
     </form>
 </div>
 <!-- MOSTRAR DATOS -->
-<div class="row justify-content-center" id="DatosAlumnos">
+<div class="row justify-content-center">
     <div class="col-lg-10 table-wrapper">
         <h2 class="text-center mb-4">Alumnos Ingresados</h2>
         <div class="table-responsive">
@@ -104,7 +104,7 @@ $grados = $buscargrado->mostrarGrados();
     </div>
 </div>
 
-<!-- Scripts JS -->
+<!-- js -->
 <script src="../../src/alumnos/alumnos.js"></script>
 <script src="../../src/funciones.js"></script>
 <?php include '../template/footer.php'; ?>
