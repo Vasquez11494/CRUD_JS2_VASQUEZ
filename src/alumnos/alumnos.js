@@ -112,10 +112,10 @@ const ObtenerAlumnos = async (e) => {
                     const BtnModificar = document.createElement('button');
                     const BtnEliminar = document.createElement('button');
 
-                    BtnModificar.textContent = 'Modificar';
+                    BtnModificar.innerHTML = '<i class="bi bi-pencil"></i>';
                     BtnModificar.classList.add('btn', 'btn-warning', 'w-100', 'text-uppercase', 'fw-bold', 'shadow', 'border-0');
 
-                    BtnEliminar.textContent = 'Eliminar';
+                    BtnEliminar.innerHTML = '<i class="bi bi-trash3"></i>';
                     BtnEliminar.classList.add('btn', 'btn-danger', 'w-100', 'text-uppercase', 'fw-bold', 'shadow', 'border-0');
 
                     BtnModificar.addEventListener('click', () => llenarFormulario(alumno));

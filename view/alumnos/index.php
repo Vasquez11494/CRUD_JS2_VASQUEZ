@@ -59,19 +59,19 @@ $grados = $buscargrado->mostrarGrados();
         </div>
         <div class="row mb-3">
             <div class="col">
-                <button type="submit" id="BtnGuardar" class="btn btn-primary w-100 text-uppercase fw-bold shadow border-0">Guardar</button>
+                <button type="submit" id="BtnGuardar" class="btn btn-primary w-100 text-uppercase shadow border-0">Guardar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnBuscar" class="btn btn-info w-100 text-uppercase fw-bold shadow border-0">Buscar</button>
+                <button type="button" id="BtnBuscar" class="btn btn-info w-100 text-uppercase shadow border-0">Buscar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnModificar" class="btn btn-warning w-100 text-uppercase fw-bold shadow border-0">Modificar</button>
+                <button type="button" id="BtnModificar" class="btn btn-warning w-100 text-uppercase shadow border-0">Modificar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnCancelar" class="btn btn-secondary w-100 text-uppercase fw-bold shadow border-0">Cancelar</button>
+                <button type="button" id="BtnCancelar" class="btn btn-secondary w-100 text-uppercase shadow border-0">Cancelar</button>
             </div>
             <div class="col">
-                <button type="reset" id="BtnLimpiar" class="btn btn-secondary w-100 text-uppercase fw-bold shadow border-0">Limpiar</button>
+                <button type="reset" id="BtnLimpiar" class="btn btn-secondary w-100 text-uppercase shadow border-0">Limpiar</button>
             </div>
         </div>
     </form>
@@ -84,7 +84,7 @@ $grados = $buscargrado->mostrarGrados();
             <table class="table table-bordered table-hover" id="AlumnosIngresados">
                 <thead class="table-warning" >
                     <tr>
-                        <th>No.</th>
+                        <th >No.</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>
                         <th>Grado</th>

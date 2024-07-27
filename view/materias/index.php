@@ -21,19 +21,19 @@ include_once '../template/header.php'; ?>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <button type="submit" id="BtnGuardar" class="btn btn-primary w-100 text-uppercase fw-bold shadow border-0">Guardar</button>
+                <button type="submit" id="BtnGuardar" class="btn btn-primary w-100 text-uppercase shadow  border-0">Guardar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnBuscar" class="btn btn-info w-100 text-uppercase fw-bold shadow border-0">Buscar</button>
+                <button type="button" id="BtnBuscar" class="btn btn-info w-100 text-uppercase shadow  border-0">Buscar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnModificar" class="btn btn-warning w-100 text-uppercase fw-bold shadow border-0">Modificar</button>
+                <button type="button" id="BtnModificar" class="btn btn-warning w-100 text-uppercase shadow  border-0">Modificar</button>
             </div>
             <div class="col">
-                <button type="button" id="BtnCancelar" class="btn btn-secondary w-100 text-uppercase fw-bold shadow border-0">Cancelar</button>
+                <button type="button" id="BtnCancelar" class="btn btn-secondary w-100 text-uppercase shadow  border-0">Cancelar</button>
             </div>
             <div class="col">
-                <button type="reset" id="BtnLimpiar" class="btn btn-secondary w-100 text-uppercase fw-bold shadow border-0">Limpiar</button>
+                <button type="reset" id="BtnLimpiar" class="btn btn-secondary w-100 text-uppercase shadow  border-0">Limpiar</button>
             </div>
         </div>
     </form>
@@ -43,7 +43,7 @@ include_once '../template/header.php'; ?>
         <h2 class="text-center mb-4">Materias Registradas</h2>
         <div class="table-responsive">
             <table class="table table-bordered table-hover" id="MateriasIngresadas">
-                <thead class="table-warning">
+                <thead class="table-warning text-center">
                     <tr>
                         <th>No.</th>
                         <th>Nombre de la Materia</th>

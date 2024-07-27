@@ -21,7 +21,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-clipboard-check-fill me-2"></i>Califcaciones</a>
                     <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
                         <li><a class="dropdown-item" href="/CRUD_JS2_VASQUEZ/view/notas/index.php"><i class="bi bi-pencil me-2"></i>Ingresar Calificaciones</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill me-2"></i>Ver Tarjeta de Calificaciones</a></li>
+                        <li><a class="dropdown-item" href="/CRUD_JS2_VASQUEZ/view/notas/index.php"><i class="bi bi-eye-fill me-2"></i>Ver Tarjeta de Calificaciones</a></li>
                     </ul>
                 </li>
             </ul>

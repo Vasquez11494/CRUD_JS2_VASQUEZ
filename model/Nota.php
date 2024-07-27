@@ -13,17 +13,16 @@ class Notas extends Conexion
     public  $nota_alu_id;
     public  $nota_materia_id;
     public  $nota;
-    
+
 
 
     public function __construct($args = [])
     {
         $this->nota_id = $args['nota_id'] ?? null;
         $this->nota_alu_id = $args['nota_alu_id'] ?? '';
-        $this->nota_materia_id= $args['nota_materia_id'] ?? '';
-        $this->nota= $args['nota'] ?? '';
-     
-    }   
+        $this->nota_materia_id = $args['nota_materia_id'] ?? '';
+        $this->nota = $args['nota'] ?? '';
+    }
 
     public function guardar()
     {
@@ -33,22 +32,24 @@ class Notas extends Conexion
         return $resultado;
     }
 
-    public function tieneNotas($id){
-            
-        $sql = "SELECT * FROM notas  where nota_alu_id = $id ";
+    public function tieneNotas($id)
+    {
 
-        // echo $sql;
+        $sql = "SELECT materia_nombre, 
+                NVL(nota, null) AS nota FROM  materias
+                LEFT JOIN  notas ON materia_id = nota_materia_id AND nota_alu_id = $id where  materia_situacion = 1";
+
+        // echo json_encode($sql);
         // exit;
         $resultado =  self::servir($sql);
         return $resultado;
     }
 
-    public function modificar(){
+    public function modificar()
+    {
         $sql = "UPDATE notas SET nota = '$this->nota' WHERE nota_alu_id= $this->nota_alu_id AND  nota_materia_id = '$this->nota_materia_id'";
 
         $resultado = $this->ejecutar($sql);
-        return $resultado; 
+        return $resultado;
     }
-
-
 }
