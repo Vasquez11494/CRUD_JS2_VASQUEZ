@@ -2,7 +2,7 @@
 // ini_set('display_errors', '1');
 // ini_set('display_startup_errors', '1');
 // error_reporting(E_ALL);
-
+require '../template/header.php';
 require '../../model/Alumno.php';
 
 $alumno = new Alumno();
@@ -18,7 +18,7 @@ include_once '../templates/header.php'; ?>
             <select name="alu_id" id="alu_id" class="form-control form-control-sm" required>
                 <option value="">SELECCIONE...</option>
                 <?php foreach ($alumnos as $alumno) : ?>
-                    <option value="<?= $alumno['alu_id'] ?>"> <?= $alumno['nombre_completo'] ?></option>
+                    <option value="<?= $alumno['alu_id'] ?>"> <?= $alumno['alu_nombre'].' '.$alumno['alu_apellido'] ?></option>
                 <?php endforeach ?>  
             </select>
         </div>

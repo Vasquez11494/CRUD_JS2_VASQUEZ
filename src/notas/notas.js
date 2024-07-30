@@ -45,7 +45,7 @@ const BuscarNotas = async () => {
 
         if (respuesta.status == 200) {
             if (data.length > 0) {
-                console.log(data)
+                // console.log(data)
                 data.forEach(materia => {
                     const tr = document.createElement('tr');
                     const celda1 = document.createElement('td');
@@ -58,10 +58,10 @@ const BuscarNotas = async () => {
                     celda3.innerHTML = `
                         <input type="hidden" name="materia_id[]" value="${materia.materia_id}">
                         <input type="number" name="nota[]" 
-                            value="${materia.nota !== null ? materia.nota : ''}" 
-                            placeholder="${materia.nota !== null ? '' : 'Sin nota'}" 
-                            class="form-control form-control-sm w-50 mx-auto" 
-                            step="0.01" required min="0" max="100">
+                        value="${materia.nota !== null ? materia.nota : ''}" 
+                        placeholder="${materia.nota !== null ? '' : 'Sin nota'}" 
+                        class="form-control form-control-sm w-50 mx-auto" 
+                        step="0.01" required min="0" max="100">
                     `;
                     tr.appendChild(celda1);
                     tr.appendChild(celda2);
@@ -71,7 +71,7 @@ const BuscarNotas = async () => {
                     fragment.appendChild(tr);
 
                     if (materia.nota !== null) {
-                        tieneNotas = true; 
+                        tieneNotas = true;
                     }
                     contador++;
                 });
@@ -101,14 +101,12 @@ const GuardarNotas = async (e) => {
 
     e.preventDefault();
 
-    if (validarFormulario(FormularioNotas, ['nota_id'])) {
+    if (validarFormulario(FormularioNotas)) {
 
         const nota_alu_id = FormularioNotas.alu_id.value
-        console.log(nota_alu_id)
+        // console.log(nota_alu_id)
         const formData = new FormData(FormularioNotas)
         formData.append('tipo', 1);
-        formData.delete('nota_id');
-  
 
         const url = '/CRUD_JS2_VASQUEZ/controller/Notas/index.php'
 
@@ -133,9 +131,9 @@ const GuardarNotas = async (e) => {
                     text: mensaje,
                     icon: 'success',
                     showConfirmButton: false,
-                    timer: 1500, 
-                    timerProgressBar: true, 
-                    background: '#e0f7fa', 
+                    timer: 1500,
+                    timerProgressBar: true,
+                    background: '#e0f7fa',
                     customClass: {
                         title: 'custom-title-class',
                         text: 'custom-text-class'
@@ -159,7 +157,7 @@ const GuardarNotas = async (e) => {
     }
 }
 
-FormularioNotas.addEventListener('click', GuardarNotas)
+FormularioNotas.addEventListener('submit', GuardarNotas)
 
 inputAlumno.addEventListener('change', BuscarNotas)
 

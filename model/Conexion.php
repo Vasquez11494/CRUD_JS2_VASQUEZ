@@ -7,6 +7,7 @@ abstract class Conexion
     {
         try {
             self::$conexion = new PDO("informix:host=host.docker.internal; service=9088;database=tienda; server=informix; protocol=onsoctcp;EnableScrollableCursors=1", "informix", "in4mix");
+            // self::$conexion = new PDO('mysql:host=host.docker.internal;port=3306;dbname=tienda', 'root', '');
             self::$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo "CONEXION EXITOSA";
         } catch (PDOException $e) {

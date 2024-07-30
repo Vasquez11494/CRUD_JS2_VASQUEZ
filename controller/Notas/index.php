@@ -16,9 +16,9 @@ try {
             if ($tipo === '1') {
 
                 $nota_alu_id = filter_var($_POST['alu_id'], FILTER_VALIDATE_INT);
-                $_POST['notas'] =array_filter($_POST['notas']);
+                $_POST['nota'] =array_filter($_POST['nota']);
         
-                $notas = $_POST['notas'];
+                $notas = $_POST['nota'];
         
          
                 foreach ($notas as $materia_id => $nota) {

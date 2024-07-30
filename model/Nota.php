@@ -34,14 +34,13 @@ class Notas extends Conexion
 
     public function tieneNotas($id)
     {
-
         $sql = "SELECT materia_nombre, 
-                NVL(nota, null) AS nota FROM  materias
-                LEFT JOIN  notas ON materia_id = nota_materia_id AND nota_alu_id = $id where  materia_situacion = 1";
+                       NVL(nota, NULL) AS nota
+                FROM materias
+                LEFT JOIN notas ON materia_id = nota_materia_id AND nota_alu_id = $id
+                WHERE materia_situacion = 1";
 
-        // echo json_encode($sql);
-        // exit;
-        $resultado =  self::servir($sql);
+        $resultado = self::servir($sql);
         return $resultado;
     }
 

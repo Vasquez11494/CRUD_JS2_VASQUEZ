@@ -64,4 +64,4 @@ $NotasAlumno = $notas->NotasAlumno($_POST['alu_id']);
         </div>
     </div>
 </div>
-<?php require '../template/footer.php'; ?>
+<?php require '../template/footer.php' ?>

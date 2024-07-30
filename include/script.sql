@@ -1,16 +1,17 @@
-create table grados (
-    grad_id  SERIAL not null,
-    grad_nombre VARCHAR(50),
+
+CREATE TABLE grados (
+    grad_id SERIAL NOT NULL ,
+    grad_nombre VARCHAR (50) NOT NULL,
     PRIMARY KEY (grad_id)
 );
 
-create table armas (
-    arm_id SERIAL NOT NULL,
-    arm_nombre VARCHAR(50),
+CREATE TABLE armas (
+    arm_id SERIAL NOT NULL ,
+    arm_nombre VARCHAR(50) NOT NULL,
     PRIMARY KEY (arm_id)
 );
 
-create table alumnos (
+CREATE TABLE alumnos (
     alu_id SERIAL NOT NULL,
     alu_nombre VARCHAR(50) NOT NULL,
     alu_apellido VARCHAR(50) NOT NULL,
@@ -20,8 +21,9 @@ create table alumnos (
     alu_situacion INT DEFAULT 1,
     PRIMARY KEY (alu_id),
     FOREIGN KEY (alu_grado) REFERENCES grados (grad_id),
-    FOREIGN KEY (alu_arma) REFERENCES armas (arm_id) 
+    FOREIGN KEY (alu_arma) REFERENCES armas (arm_id)
 );
+
 
 -- INSERT EN LA TABLA GRADOS
 insert into grados (grad_nombre) values ("Sold. 2da.");
@@ -56,21 +58,19 @@ INSERT INTO armas (arm_nombre) VALUES ("Material de Guerra");
 -- CREANDO LA TABLA DE MATERIAS
 
 CREATE TABLE MATERIAS (
-    MATERIA_ID SERIAL NOT NULL,
-    MATERIA_NOMBRE VARCHAR(50) not null,
+    MATERIA_ID SERIAL NOT NULL ,
+    MATERIA_NOMBRE VARCHAR(50) NOT NULL,
     MATERIA_SITUACION INT DEFAULT 1,
     PRIMARY KEY (MATERIA_ID)
 );
 
-
-
 CREATE TABLE notas (
-    nota_id SERIAL NOT NULL,
+    nota_id SERIAL NOT NULL ,
     nota_alu_id INT NOT NULL,
     nota_materia_id INT NOT NULL,
     nota DECIMAL(5, 2) NOT NULL,
     PRIMARY KEY (nota_id),
     FOREIGN KEY (nota_alu_id) REFERENCES alumnos (alu_id),
-    FOREIGN KEY (nota_materia_id) REFERENCES materias (materia_id),
+    FOREIGN KEY (nota_materia_id) REFERENCES MATERIAS (MATERIA_ID),
     UNIQUE (nota_alu_id, nota_materia_id)
 );
